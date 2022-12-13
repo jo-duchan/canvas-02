@@ -36,8 +36,8 @@ export class SheepController {
       }
 
       for (let i = this.items.length - 1; i >= 0; i--) {
-        const item = this.itemsp[i];
-        if (this.x < -item.width) {
+        const item = this.items[i];
+        if (item.x < -item.width) {
           this.items.splice(i, 1);
         } else {
           item.draw(ctx, t, dots);
